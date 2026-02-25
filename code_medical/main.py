@@ -203,7 +203,7 @@ def main():
         current_std = get_current_noise_std(gen, args.G, args.mut_start, args.mut_end)
 
         for p1, p2 in parents:
-            child_z = crossover_z(p1.z, p2.z)
+            child_z = crossover_z(p1.z, p2.z, labels1=p1.labels, num_classes=NUM_CLASSES)
             child_z = mutate_z(child_z, current_std)
             next_gen.append(Individual(z=child_z, labels=p1.labels.clone()))
 

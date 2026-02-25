@@ -112,10 +112,40 @@ def get_current_noise_std(gen: int, total_gen: int, start_std: float = 0.1, end_
     return start_std + (end_std - start_std) * progress
 
 
-def crossover_z(z1: torch.Tensor, z2: torch.Tensor) -> torch.Tensor:
-    """Latent space crossover: random weighted average."""
-    alpha = torch.rand(1, device=z1.device)
-    return alpha * z1 + (1 - alpha) * z2
+def crossover_z(z1: torch.Tensor, z2: torch.Tensor,
+                 labels1: torch.Tensor = None, num_classes: int = 6) -> torch.Tensor:
+    """
+    Class-level crossover: for each class, independently pick from parent1 or parent2.
+
+    This preserves semantic integrity — each class block stays intact,
+    and the child combines the best class representations from both parents.
+
+    Args:
+        z1, z2: [N_total, 1, 56, 56] latent tensors (ordered by class)
+        labels1: [N_total] label tensor to identify class boundaries
+        num_classes: number of classes
+
+    Returns:
+        child_z: [N_total, 1, 56, 56]
+    """
+    child_z = z1.clone()
+
+    if labels1 is not None:
+        # Use label boundaries for class-level swap
+        for c in range(num_classes):
+            mask = (labels1 == c)
+            if mask.any() and torch.rand(1).item() < 0.5:
+                child_z[mask] = z2[mask]
+    else:
+        # Fallback: assume equal IPC per class, evenly split
+        ipc = z1.shape[0] // num_classes
+        for c in range(num_classes):
+            if torch.rand(1).item() < 0.5:
+                start = c * ipc
+                end = start + ipc
+                child_z[start:end] = z2[start:end]
+
+    return child_z
 
 
 def mutate_z(z: torch.Tensor, noise_std: float) -> torch.Tensor:

@@ -1,0 +1,38 @@
+{
+  "dataset": "NIH-CXR14-6class",
+  "baseline_random_guess": 0.5,
+  "upper": {
+    "densenet121": 0.7709,
+    "resnet50": 0.7527,
+    "vit_small": 0.6747
+  },
+  "runs": [
+    {
+      "model": "densenet121",
+      "best_test_auc": 0.7709,
+      "best_epoch": 23,
+      "seed": 0,
+      "epochs": 100,
+      "batch_size": 128,
+      "lr": 0.01
+    },
+    {
+      "model": "resnet50",
+      "best_test_auc": 0.7527,
+      "best_epoch": 34,
+      "seed": 0,
+      "epochs": 100,
+      "batch_size": 128,
+      "lr": 0.01
+    },
+    {
+      "model": "vit_small",
+      "best_test_auc": 0.6747,
+      "best_epoch": 96,
+      "seed": 0,
+      "epochs": 100,
+      "batch_size": 128,
+      "lr": 0.01
+    }
+  ]
+}

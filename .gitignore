@@ -1,0 +1,7 @@
+data/
+data/
+*.zip
+logs/
+*.pt
+.claude/
+__pycache__/

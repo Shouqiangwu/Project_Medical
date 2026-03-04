@@ -1,0 +1,8 @@
+{
+  "z_path": "best_z_ipc100.pt",
+  "results": {
+    "densenet121": 0.5494,
+    "resnet50": 0.5788,
+    "vit_small": 0.5515
+  }
+}

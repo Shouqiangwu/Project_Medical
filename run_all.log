@@ -1,0 +1,695 @@
+nohup: ignoring input
+Loading NIH CXR-14 dataset...
+[NIHChestXrayDataset] Loaded 14261 images across 6 classes
+  Class 0 (No Finding): 3000 images
+  Class 1 (Atelectasis): 3000 images
+  Class 2 (Cardiomegaly): 777 images
+  Class 3 (Effusion): 2788 images
+  Class 4 (Infiltration): 3000 images
+  Class 5 (Mass): 1696 images
+[NIHChestXrayDataset] Loaded 14864 images across 6 classes
+  Class 0 (No Finding): 9912 images
+  Class 1 (Atelectasis): 798 images
+  Class 2 (Cardiomegaly): 317 images
+  Class 3 (Effusion): 1171 images
+  Class 4 (Infiltration): 2224 images
+  Class 5 (Mass): 442 images
+
+
+######################################################################
+  IPC = 10  (EA steps=200)
+######################################################################
+
+============================================================
+  RANDOM BASELINE  IPC=10
+============================================================
+  Random data shape: torch.Size([60, 1, 224, 224])
+  densenet121 seed=2025: AUROC=0.5004
+  densenet121 seed=2026: AUROC=0.5063
+  -> densenet121 mean AUROC: 0.5034
+  resnet50 seed=2025: AUROC=0.4879
+  resnet50 seed=2026: AUROC=0.4885
+  -> resnet50 mean AUROC: 0.4882
+  vit_small seed=2025: AUROC=0.4754
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+Global Seed set to 2025
+[NIHChestXrayDataset] Loaded 14261 images across 6 classes
+  Class 0 (No Finding): 3000 images
+  Class 1 (Atelectasis): 3000 images
+  Class 2 (Cardiomegaly): 777 images
+  Class 3 (Effusion): 2788 images
+  Class 4 (Infiltration): 3000 images
+  Class 5 (Mass): 1696 images
+[NIHChestXrayDataset] Loaded 14864 images across 6 classes
+  Class 0 (No Finding): 9912 images
+  Class 1 (Atelectasis): 798 images
+  Class 2 (Cardiomegaly): 317 images
+  Class 3 (Effusion): 1171 images
+  Class 4 (Infiltration): 2224 images
+  Class 5 (Mass): 442 images
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 1, 128, 128) = 16384 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Restored from /root/.cache/huggingface/hub/models--stanfordmimi--MedVAE/snapshots/8040c5ccb7a51eff6b4cef513c7f20bd1bda983d/model_weights/vae_4x_1c_2D.ckpt with 0 missing and 0 unexpected keys
+MedVAE 'medvae_4_1_2d' loaded on cuda
+
+Initializing population (N=20, IPC=10)...
+[Individual 0] z stats: shape=[60, 1, 56, 56], mean=0.8731, std=9.1508, min=-60.3473, max=69.8486
+Population initialized. Each individual: z=torch.Size([60, 1, 56, 56]), labels=torch.Size([60])
+
+Latent z std = 9.1508
+  Current mut_start=0.3, mut_end=0.05
+  Suggested mut_start ~ 0.9151, mut_end ~ 0.1830
+
+=== Generation 0 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 0: Fit=0.1953 | TopScore=0.2529 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 1: Fit=0.1205 | TopScore=0.1751 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 2: Fit=0.1503 | TopScore=0.2288 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 3: Fit=0.0521 | TopScore=0.1252 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1349 | TopScore=0.2270 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1120 | TopScore=0.2268 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.0282 | TopScore=0.0983 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.0315 | TopScore=0.0905 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.0896 | TopScore=0.1794 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=-0.0471 | TopScore=0.0295 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1539 | TopScore=0.1842 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.0414 | TopScore=0.1961 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1964 | TopScore=0.2159 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1901 | TopScore=0.2474 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.2027 | TopScore=0.2778 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.0465 | TopScore=0.0818 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1203 | TopScore=0.1289 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=-0.0191 | TopScore=0.0958 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1685 | TopScore=0.1784 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.0829 | TopScore=0.1481 (resnet50)
+Gen 0 Best Fitness: 0.2027
+
+=== Generation 1 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.0445 | TopScore=0.1428 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1721 | TopScore=0.1970 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.1922 | TopScore=0.2250 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.0577 | TopScore=0.1978 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1973 | TopScore=0.2887 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.0929 | TopScore=0.2080 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.0940 | TopScore=0.1502 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.0824 | TopScore=0.1741 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1580 | TopScore=0.2597 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.2485 | TopScore=0.3154 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1738 | TopScore=0.1976 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.0358 | TopScore=0.1469 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.0478 | TopScore=0.1901 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1293 | TopScore=0.1868 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1404 | TopScore=0.2022 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1620 | TopScore=0.2212 (vit_small)
+Gen 1 Best Fitness: 0.2485
+
+=== Generation 2 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.0640 | TopScore=0.1363 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1418 | TopScore=0.1702 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.1133 | TopScore=0.1240 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.1729 | TopScore=0.2508 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1843 | TopScore=0.2220 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.0907 | TopScore=0.1366 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.0838 | TopScore=0.1725 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.1985 | TopScore=0.2188 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1151 | TopScore=0.1232 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1944 | TopScore=0.2890 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1072 | TopScore=0.1643 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.1765 | TopScore=0.1821 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1800 | TopScore=0.3466 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1623 | TopScore=0.2171 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1572 | TopScore=0.1650 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1639 | TopScore=0.2466 (vit_small)
+Gen 2 Best Fitness: 0.2485
+
+=== Generation 3 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.2087 | TopScore=0.2247 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1193 | TopScore=0.2050 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.0896 | TopScore=0.1556 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.1240 | TopScore=0.2072 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1942 | TopScore=0.2233 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1970 | TopScore=0.2672 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1297 | TopScore=0.1655 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.1186 | TopScore=0.1250 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1480 | TopScore=0.1962 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1999 | TopScore=0.2607 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.2305 | TopScore=0.3722 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.0628 | TopScore=0.1134 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1262 | TopScore=0.1767 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.2743 | TopScore=0.2799 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1075 | TopScore=0.1644 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1665 | TopScore=0.2268 (vit_small)
+Gen 3 Best Fitness: 0.2743
+
+=== Generation 4 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1273 | TopScore=0.2336 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.0560 | TopScore=0.1447 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2101 | TopScore=0.2557 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.1738 | TopScore=0.2071 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1973 | TopScore=0.2434 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1807 | TopScore=0.1936 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1165 | TopScore=0.1789 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.0480 | TopScore=0.1590 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.0569 | TopScore=0.1636 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1111 | TopScore=0.2296 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1240 | TopScore=0.1772 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.2060 | TopScore=0.2681 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1741 | TopScore=0.2313 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.2312 | TopScore=0.2686 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.0858 | TopScore=0.1652 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.2149 | TopScore=0.2929 (densenet121)
+Gen 4 Best Fitness: 0.2743
+
+=== Generation 5 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1043 | TopScore=0.1382 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.2055 | TopScore=0.2611 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.1810 | TopScore=0.2155 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.1327 | TopScore=0.1523 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1963 | TopScore=0.2706 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1256 | TopScore=0.1808 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1828 | TopScore=0.2502 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.2161 | TopScore=0.2621 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.0956 | TopScore=0.1594 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1453 | TopScore=0.2569 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.2187 | TopScore=0.2995 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.1250 | TopScore=0.1657 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.2109 | TopScore=0.2328 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1543 | TopScore=0.1656 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.2247 | TopScore=0.2864 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.2364 | TopScore=0.3146 (vit_small)
+Gen 5 Best Fitness: 0.2743
+
+=== Generation 6 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1532 | TopScore=0.2670 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1974 | TopScore=0.2568 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.1343 | TopScore=0.1852 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.1035 | TopScore=0.1328 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1695 | TopScore=0.2312 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1253 | TopScore=0.2449 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.0330 | TopScore=0.1988 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.1378 | TopScore=0.1654 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1639 | TopScore=0.2331 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1638 | TopScore=0.2506 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.2169 | TopScore=0.2484 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.1058 | TopScore=0.2853 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1389 | TopScore=0.1672 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1958 | TopScore=0.2101 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.0796 | TopScore=0.1411 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1691 | TopScore=0.2153 (vit_small)
+Gen 6 Best Fitness: 0.2743
+
+=== Generation 7 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.2485 | TopScore=0.2906 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.2402 | TopScore=0.2605 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.1140 | TopScore=0.2385 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.0834 | TopScore=0.1458 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1616 | TopScore=0.2058 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1966 | TopScore=0.2227 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.2048 | TopScore=0.3464 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.2516 | TopScore=0.3196 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1536 | TopScore=0.1884 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1886 | TopScore=0.2504 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1697 | TopScore=0.3189 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.1712 | TopScore=0.2599 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.0756 | TopScore=0.1899 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1466 | TopScore=0.1931 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.2130 | TopScore=0.2991 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1607 | TopScore=0.2486 (vit_small)
+Gen 7 Best Fitness: 0.2743
+
+=== Generation 8 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1258 | TopScore=0.1803 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1836 | TopScore=0.2689 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2669 | TopScore=0.3120 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.2495 | TopScore=0.2765 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1354 | TopScore=0.2127 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1849 | TopScore=0.2443 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1390 | TopScore=0.1630 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.2187 | TopScore=0.2924 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.0810 | TopScore=0.1851 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.2257 | TopScore=0.2728 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1516 | TopScore=0.1784 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.2650 | TopScore=0.3224 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1440 | TopScore=0.2627 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1749 | TopScore=0.2439 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1330 | TopScore=0.2545 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1428 | TopScore=0.2561 (densenet121)
+Gen 8 Best Fitness: 0.2743
+
+=== Generation 9 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1300 | TopScore=0.1691 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.2178 | TopScore=0.2730 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2312 | TopScore=0.2977 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.2194 | TopScore=0.2551 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.2058 | TopScore=0.2273 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.2490 | TopScore=0.2782 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.2403 | TopScore=0.3049 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.2031 | TopScore=0.2188 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.2213 | TopScore=0.2432 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1849 | TopScore=0.3522 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1985 | TopScore=0.3156 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.2446 | TopScore=0.2854 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.2310 | TopScore=0.3149 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.2252 | TopScore=0.2420 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1720 | TopScore=0.3048 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1257 | TopScore=0.1725 (vit_small)
+Gen 9 Best Fitness: 0.2743
+
+=== Generation 10 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.2291 | TopScore=0.3186 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1602 | TopScore=0.2505 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.1867 | TopScore=0.2784 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.2836 | TopScore=0.3240 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1605 | TopScore=0.1920 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.2511 | TopScore=0.2624 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.2168 | TopScore=0.2667 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.1773 | TopScore=0.2618 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.2375 | TopScore=0.3114 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1871 | TopScore=0.2629 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1003 | TopScore=0.1228 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.1960 | TopScore=0.2792 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1682 | TopScore=0.2528 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1931 | TopScore=0.2790 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.2237 | TopScore=0.3351 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1513 | TopScore=0.2433 (densenet121)
+Gen 10 Best Fitness: 0.2836
+
+=== Generation 11 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.2215 | TopScore=0.2397 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1934 | TopScore=0.3487 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2495 | TopScore=0.3329 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.2189 | TopScore=0.3344 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1815 | TopScore=0.2496 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1913 | TopScore=0.2557 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1867 | TopScore=0.1925 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.1724 | TopScore=0.1961 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1797 | TopScore=0.2220 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.2323 | TopScore=0.2742 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.2697 | TopScore=0.2933 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.1980 | TopScore=0.2628 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.3065 | TopScore=0.3344 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1931 | TopScore=0.2617 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1878 | TopScore=0.3099 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1850 | TopScore=0.2522 (vit_small)
+Gen 11 Best Fitness: 0.3065
+
+=== Generation 12 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.2492 | TopScore=0.3224 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1822 | TopScore=0.3051 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2748 | TopScore=0.3848 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.2608 | TopScore=0.2957 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1622 | TopScore=0.2552 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1536 | TopScore=0.2169 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.1782 | TopScore=0.2197 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.1437 | TopScore=0.1636 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.2065 | TopScore=0.2810 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.2343 | TopScore=0.2948 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.1791 | TopScore=0.3018 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.2044 | TopScore=0.2561 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1714 | TopScore=0.2218 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.1991 | TopScore=0.2917 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1311 | TopScore=0.1857 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.2720 | TopScore=0.2830 (resnet50)
+Gen 12 Best Fitness: 0.3065
+
+=== Generation 13 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.2769 | TopScore=0.3465 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.1964 | TopScore=0.3745 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2565 | TopScore=0.2828 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.1911 | TopScore=0.2175 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.1972 | TopScore=0.2406 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.3130 | TopScore=0.4905 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.2018 | TopScore=0.2661 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.2889 | TopScore=0.2981 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.1518 | TopScore=0.2465 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.1861 | TopScore=0.2533 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.2491 | TopScore=0.2946 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.2925 | TopScore=0.4034 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.2829 | TopScore=0.3057 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.2323 | TopScore=0.2780 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.2556 | TopScore=0.4471 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.2072 | TopScore=0.2827 (densenet121)
+Gen 13 Best Fitness: 0.3130
+
+=== Generation 14 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 4: Fit=0.1208 | TopScore=0.2440 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 5: Fit=0.2467 | TopScore=0.3250 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 6: Fit=0.2819 | TopScore=0.3061 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 7: Fit=0.3063 | TopScore=0.3131 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 8: Fit=0.2056 | TopScore=0.2765 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 9: Fit=0.1518 | TopScore=0.2978 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 10: Fit=0.2617 | TopScore=0.3977 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 11: Fit=0.2503 | TopScore=0.2672 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 12: Fit=0.2587 | TopScore=0.2864 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 13: Fit=0.2296 | TopScore=0.3031 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 14: Fit=0.3036 | TopScore=0.3391 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 15: Fit=0.3169 | TopScore=0.3850 (vit_small)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 16: Fit=0.1347 | TopScore=0.2017 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 17: Fit=0.2130 | TopScore=0.2415 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 18: Fit=0.1494 | TopScore=0.2290 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 19: Fit=0.1964 | TopScore=0.2608 (resnet50)
+Gen 14 Best Fitness: 0.3169
+
+Evolution Finished.
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+  vit_small seed=2026: AUROC=0.4779
+  -> vit_small mean AUROC: 0.4766
+
+============================================================
+  EA EVOLUTION  IPC=10  Steps=200  N=20  G=15
+  Command: /opt/conda/bin/python main.py --data_dir ./data --IPC 10 --N 20 --G 15 --steps 200 --out_dir logs/ipc10 --device cuda
+============================================================
+
+============================================================
+  FINAL EVALUATION  IPC=10
+============================================================
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 1, 128, 128) = 16384 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Restored from /root/.cache/huggingface/hub/models--stanfordmimi--MedVAE/snapshots/8040c5ccb7a51eff6b4cef513c7f20bd1bda983d/model_weights/vae_4x_1c_2D.ckpt with 0 missing and 0 unexpected keys
+MedVAE 'medvae_4_1_2d' loaded on cuda
+  Decoded images: torch.Size([60, 1, 224, 224])
+[NIHChestXrayDataset] Loaded 66502 images across 6 classes
+  Class 0 (No Finding): 50500 images
+  Class 1 (Atelectasis): 3414 images
+  Class 2 (Cardiomegaly): 777 images
+  Class 3 (Effusion): 2788 images
+  Class 4 (Infiltration): 7327 images
+  Class 5 (Mass): 1696 images
+[NIHChestXrayDataset] Loaded 14864 images across 6 classes
+  Class 0 (No Finding): 9912 images
+  Class 1 (Atelectasis): 798 images
+  Class 2 (Cardiomegaly): 317 images
+  Class 3 (Effusion): 1171 images
+  Class 4 (Infiltration): 2224 images
+  Class 5 (Mass): 442 images
+  densenet121 seed=2025: AUROC=0.5869
+  densenet121 seed=2026: AUROC=0.5934
+  -> densenet121 mean AUROC: 0.5902
+  resnet50 seed=2025: AUROC=0.5866
+  resnet50 seed=2026: AUROC=0.5922
+  -> resnet50 mean AUROC: 0.5894
+  vit_small seed=2025: AUROC=0.5782
+  vit_small seed=2026: AUROC=0.5511
+  -> vit_small mean AUROC: 0.5647
+
+
+######################################################################
+  IPC = 50  (EA steps=300)
+######################################################################
+
+============================================================
+  RANDOM BASELINE  IPC=50
+============================================================
+  Random data shape: torch.Size([300, 1, 224, 224])
+  densenet121 seed=2025: AUROC=0.5795
+  densenet121 seed=2026: AUROC=0.5838
+  -> densenet121 mean AUROC: 0.5816
+  resnet50 seed=2025: AUROC=0.5630
+  resnet50 seed=2026: AUROC=0.5239
+  -> resnet50 mean AUROC: 0.5434
+  vit_small seed=2025: AUROC=0.5351
+<frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+Global Seed set to 2025
+[NIHChestXrayDataset] Loaded 14261 images across 6 classes
+  Class 0 (No Finding): 3000 images
+  Class 1 (Atelectasis): 3000 images
+  Class 2 (Cardiomegaly): 777 images
+  Class 3 (Effusion): 2788 images
+  Class 4 (Infiltration): 3000 images
+  Class 5 (Mass): 1696 images
+[NIHChestXrayDataset] Loaded 14864 images across 6 classes
+  Class 0 (No Finding): 9912 images
+  Class 1 (Atelectasis): 798 images
+  Class 2 (Cardiomegaly): 317 images
+  Class 3 (Effusion): 1171 images
+  Class 4 (Infiltration): 2224 images
+  Class 5 (Mass): 442 images
+making attention of type 'vanilla' with 512 in_channels
+Working with z of shape (1, 1, 128, 128) = 16384 dimensions.
+making attention of type 'vanilla' with 512 in_channels
+Restored from /root/.cache/huggingface/hub/models--stanfordmimi--MedVAE/snapshots/8040c5ccb7a51eff6b4cef513c7f20bd1bda983d/model_weights/vae_4x_1c_2D.ckpt with 0 missing and 0 unexpected keys
+MedVAE 'medvae_4_1_2d' loaded on cuda
+
+Initializing population (N=20, IPC=50)...
+[Individual 0] z stats: shape=[300, 1, 56, 56], mean=0.7463, std=9.1686, min=-59.0240, max=102.2322
+Population initialized. Each individual: z=torch.Size([300, 1, 56, 56]), labels=torch.Size([300])
+
+Latent z std = 9.1686
+  Current mut_start=0.3, mut_end=0.05
+  Suggested mut_start ~ 0.9169, mut_end ~ 0.1834
+
+=== Generation 0 ===
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 0: Fit=0.0873 | TopScore=0.1955 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 1: Fit=0.0489 | TopScore=0.1900 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 2: Fit=0.0779 | TopScore=0.2278 (densenet121)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
+  Ind 3: Fit=0.2304 | TopScore=0.3208 (resnet50)
+  Class weights: ['1.00', '1.00', '1.00', '1.00', '1.00', '1.00']
